@@ -1,0 +1,11 @@
+<!-- books_by_category_and_year.html -->
+{% extends 'base_generic.html' %}
+
+{% block content %}
+    <h1>Books in {{ category }} category for the year {{ year }}</h1>
+    <ul>
+        {% for book in book_list %}
+            <li>{{ book.title }} by {{ book.author }} ({{ book.year }})</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
